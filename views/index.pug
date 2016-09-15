@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .container
+    .jumbotron
+      h2.text-center Commercial License Key Generation
+    .row
+      .col-md-8.col-md-offset-2
+        p
+          label.sr-only(for='inputIdentifier') License Identifier
+          input#inputIdentifier.form-control(type='text', placeholder='License Identifier', required=true, autofocus=true)
+    .row
+      .col-md-8.col-md-offset-2
+        p
+          label.sr-only(for='inputName') Licensee Name
+          input#inputName.form-control(type='text', placeholder='Licensee Name', required=true, autofocus=true)
+    .row
+      .col-md-8.col-md-offset-2
+        p
+          input#inputExpiry.form-control(type='text', placeholder='Expiry Date', required=true)
+    .row
+      .col-md-8.col-md-offset-2
+        p
+          button#inputButton.btn.btn-lg.btn-default(type='button') Generate License Key
+    .row
+      .col-md-8.col-md-offset-2
+        .well.text-center
+          textarea#license(rows='10', cols='80', spellcheck='false', readonly=true)
